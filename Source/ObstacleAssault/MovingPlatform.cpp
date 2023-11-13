@@ -22,7 +22,7 @@ void AMovingPlatform::BeginPlay()
 
 	//MyVector.Y = MyX;
 
-	SetActorLocation(MyVector);
+	//SetActorLocation(MyVector);
 
 }
 
@@ -31,5 +31,8 @@ void AMovingPlatform::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
 
+	MyVector.Y = MyVector.Y + 1;
+
+	SetActorLocation(MyVector);
 }
 
