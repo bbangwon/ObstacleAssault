@@ -16,14 +16,7 @@ void AMovingPlatform::BeginPlay()
 {
 	Super::BeginPlay();
 
-	//MyInt = 9;
-	//APlusB = InputA + InputB;
-	//APlusBFloat = InputFloatA + InputFloatB;
-
-	//MyVector.Y = MyX;
-
-	//SetActorLocation(MyVector);
-
+	StartLocation = GetActorLocation();
 }
 
 // Called every frame
@@ -43,6 +36,7 @@ void AMovingPlatform::Tick(float DeltaTime)
 
 	// Send platform back if gone too far
 		// Check how far we`ve moved
+	DistanceMoved =	FVector::Dist(StartLocation, CurrentLocation);
 		// Reverse direction of motion if gone too far
 }
 
