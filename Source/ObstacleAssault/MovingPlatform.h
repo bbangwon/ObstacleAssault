@@ -30,5 +30,4 @@ public:
 	float MoveDistance = 100;
 
 	FVector StartLocation;
-
 };
